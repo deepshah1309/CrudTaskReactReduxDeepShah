@@ -1,0 +1,11 @@
+.user_card{
+  display:grid;
+  grid-template-columns: 50% 25% 25%;
+ margin-top:1rem;
+ margin-left:1rem;
+ margin-right:1rem;
+ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ background-color: whitesmoke;
+ padding:10px;
+ border-radius:12px;
+}

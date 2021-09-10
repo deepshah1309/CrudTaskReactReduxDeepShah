@@ -1,24 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
-
+import MainPage from './Components/MainPage/MainPage';
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+import UserList from './Components/UserList/UserList';
+import ProductList from './Components/ProductList/ProductList';
+import AddProduct from './Components/Product/AddProduct';
+import NavBar from './Components/NavBar/NavBar';
+import Login from './Components/Login/Login';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <Router>
+      <Switch>
+        {/** Routing techniques for Deep CRUD APP  and store is managed in the provider redux*/}
+        <Route exact path="/">
+            <NavBar/>
+            <div><MainPage/></div>
+        </Route>
+        <Route exact path="/user/add">
+            <div>User add</div>
+        </Route>
+        <Route exact path="/:id/product">
+            <ProductList/>
+        </Route>
+        <Route exact path="/userList">
+        <NavBar/>
+          <UserList/>
+        </Route>
+        <Route exact path="/userlogin">
+                 <Login/>
+        </Route>
+        <Route exact path="/product/add">
+           <AddProduct/>
+           <ProductList/>
+        </Route>
+        
+      </Switch>
+    </Router>
+ 
   );
 }
 

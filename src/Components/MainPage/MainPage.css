@@ -1,0 +1,12 @@
+.makeHeight{
+  min-height: 100vh;
+  display: flex;
+  justify-content:space-between;
+  place-items: center;
+
+}
+.innerBox{
+  display:grid;
+  grid-template-columns: 50% 50%;
+   
+}

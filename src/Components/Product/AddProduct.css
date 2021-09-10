@@ -1,0 +1,6 @@
+.set-grid{
+  display: flex;
+  justify-content:center;
+  place-items:center;
+  min-height:100vh;
+}
